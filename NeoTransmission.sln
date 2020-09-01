@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeoTransmission", "NeoTransmission\NeoTransmission.csproj", "{F5BDF98B-C4AB-4005-9E74-BD355D738544}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeoTransmissionTest", "NeoTransmissionTest\NeoTransmissionTest.csproj", "{4C36A452-0127-4A31-8654-506E616970A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5BDF98B-C4AB-4005-9E74-BD355D738544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BDF98B-C4AB-4005-9E74-BD355D738544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BDF98B-C4AB-4005-9E74-BD355D738544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BDF98B-C4AB-4005-9E74-BD355D738544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C36A452-0127-4A31-8654-506E616970A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C36A452-0127-4A31-8654-506E616970A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C36A452-0127-4A31-8654-506E616970A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C36A452-0127-4A31-8654-506E616970A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {618CA93E-D726-4EC1-A693-D2102835C5AF}
+	EndGlobalSection
+EndGlobal

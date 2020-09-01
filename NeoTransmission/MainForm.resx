@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="olvclOrder.Text" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="olvcName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="olvcSize.Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="olvcProgress.Text" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="olvcState.Text" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="olvcSeeds.Text" xml:space="preserve">
+    <value>Seeds</value>
+  </data>
+  <data name="olvcPeers.Text" xml:space="preserve">
+    <value>Peers</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="olvMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="olvMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 51</value>
+  </data>
+  <data name="olvMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>846, 222</value>
+  </data>
+  <metadata name="imglStates.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="imglStates.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADM
+        EQAAAk1TRnQBSQFMAgEBCQEAARgBAAEIAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAATADAAEBAQABCAYAAQwYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wIADv8yAAL/AfQB8wHu
+        AZkCdAGZAe4B8wH0Av80AAHzAXkCWAJZAlgBeQHzNQAB8wF5AVgCWQLlAlkBWAF5AfMzAAH/AXkEWAIA
+        BFgBeQH/MgABGwF5BFgCAARYAXkBGzIAAZkBeQRYAqAFWAGZMgABmQGaAXkDWAIABVgBmTIAAZkBmgJ6
+        AlgCAARYAXkBmTIAAZkBmgR6AUMBDwRYAXkBmTIAARsBmQR6Am0EegF5ARsyAAH/AZkBoAHlAnoC6wN6
+        AZoBmQH/MwAB9AGZCKABmQH0NQAB9AKZBKACmQH0NwAB/wEbARoCmQEaARsB/4cAA/8C9AG8AZIBrgGS
+        AbwB9AH/EgAB/wH0AfMB9wFyAfcB8wFyAfMB9AP/FQAE/wHxAY0BrgGMAa4BjQHxAf8SAAP/AXIBlwFy
+        CwAL/woAAe8BjQKvAdcBjQHvAgAQ/wQAAZgDcgGYAQABcgcAAf8BtQK0AbUB/wG1ArQBtQH/CgABjQGv
+        AbUBtgG1Aa8BjQIAAv8B8wG1BbQBtQHzAfABtAHwAv8GAAFyAZcBcgoAAbQB2gHZAbQBAAG0AtkBtAcA
+        AfMB9wGNAfcBjQG1At0BtgG1AbYEAAG7AbME2gG0AfQB8wG0AdoBtAHzBQAB7wVyAe8IAAG0AdoB0wG0
+        AQABtAHZAdMBtAYAAfMBjQGuAYwBrgKNAt4BtgH3AfMEAAG0AdsBswO0AfQB8wG0A9sBtAHzBAABkQGX
+        AXIBlwGRAZcBkQgAAbQB2gHUAbQBAAG0AdoB1AG0BgAB7wGNAq8B1wKNAbYBrgG2AfMFAAG0AboBtAH0
+        AwABuwK0AbMCtAG7BAABBwNyApEBBwgAAbQB2gGzAbQBAAG0ArMBtAYAAY0BrwG1AbYBtQGvAY0BAAG2
+        BwABtAG6AbQGAAO0BgACnQKXAZ0BlwGdCAABtAG6AbMBtAEAArQBswG0BgABtgG1At0BtgG1AbYJAAG0
+        AdsBtAYAAbQBugG0BgABmAGdBJcBBwgAAbQB2wK0AQACtAGzAbQGAAHzAYwC3gG2A40B9wHzBgABtAHb
+        AbQGAAG0AdsBtAMAAQgEmANyAZcDmAEIBQABtALbAbQBAAG0AdsCtAYAAbYB8wG2AfcBrwGNAa4BjAGu
+        AY0B8wMAAQkCtAHcArQBCQMAAfQBtAHcAbQDAAHyAZgBCAOYAZ0BcgGXA5gB8gUAAboB3AHbAboBAAG6
+        AdwB2wG6CgAB7wGNAq8B1wGNAe8DAAHzAboD3AG6AfMB9AO6AdsB3AG6BAAB8gGYAQgFmAEIAZgB8gYA
+        AboC3AG6AQABugLcAboKAAGNAa8BtQG2AbUBrwGNBAAB8wG6AdwBugHzAfQBugXcAQkFAAHzAZgBCAOY
+        AQgBmAHzBwABCQLbAQkBAAEJAtsBCQoAAbYBtQLdAbYBtQG2BQAB8wHbAfMBAAEJBNsB3AEJAf8GAAHz
+        AZgBCAGYAQgBmAHzGwAB8wH3At4BtgGMAfMYAAHzAZgBCAGYAfMdAAHzAbYB9wG2AfMBthkAAfMBmAHz
+        BwAQ/wEADv8DAAH/AfQC8wG8AbQBvALzAfQB/wQADv8BAAHxDu8B8QEAAv8B9AHyAQcB7QJyAe0BBwHy
+        AfQC/wMAA/8BvAG0AdoBtAG8A/8EAAL/AfQB8gEHAe0CbgHtAQcB8gH0Av8BAAIHAvEC8AG8BAcC7gEH
+        Ae8BBwMAAfEBcgFPAVUCVAFVAU8BcgHxBwAB8QG0AdoB0wHaAbQB8QgAAfEBbgFFAUYCIAFGAUUBbgHx
+        AwABvAHyAe8C7AP4BesB5AHuAbwCAAHyAXIBVQZUAVUBcgHyBQAB8gG0AdoDswHUAbQB8gYAAfIBbgFG
+        AekEIAHpAUYBbgHyAgABvAHzAfEB8AG8Ae4IBwK8AQAB/wGXAVUCVAHyBVQBVQGXAf8DAAHyAbQB2wWz
+        ArQB8gQAAf8BbwFGAekB8QHpAiAB6QHzAekBRgFvAf8BAAHwAfIB/wH2AfQB8wLyBfEB8gHuAfABAAEI
+        AVUBVAFOAfEC8gFOBFQBVQEIAgAB8gG0A9sB1QG0ArMDtAHyAwABvAFGASAC8AHxAukD8wEgAUYBvAEA
+        AfEB8AHzAfABBwGRAbMCrQGLAZEB9wHvAbwBBwHxAQABmAFVAU4B8ALxAvIBTgNUAVUBmAIAAQkDtAHb
+        AdUB2wG0AdsDtAEJAwABkwFGAukC8AHxAvIB8wLpAUYBkwEAAfMBvAHzAfEBtAGtAbQC2wG0AbMBtAEH
+        AbwBBwHzAQABlwF3AZgB8AHzAU4B8QLyA04BVQGXBQABtAHbBLQBCQYAAW8CRgLpAvAB8QHyBOkBbwEA
+        AfQBvAHzAbsBiwG0A9UBtAHcAYsBtQG8AQcB9AEAAZcBdwFVAf8BTwJOAfEC8gJOAU8BlwUAAbQB3AG0
+        AdsBtAHbAbQGAAFvA0YB6QG8AvAB8QPpAUUBbwEAAf8B8AH0AZEGswHbAbQBrgLwAf8BAAGYAXcEVQJP
+        A/IBTgFVAZgFAAEJBbQBCQYAAZMBbwFGAUUB/wH0AfMD8QLpAUYBkwIAAfQB8QGLBLMBrQHVArMBiwHx
+        AfQCAAEIAZcBdwZVAf8BmAJ3AQgFAAG0AdwBtAHcAbQB3AG0BgABGgFvAUYD/wJGA/8BRgFvARoEAAK0
+        A7MB1QHbArMBtAQAAf8ClwZ3AVUBdwKXAf8FAAEJBbQBCQYAAf8DbwH/BEYB/wNvAf8EAAG7ArQEugHc
+        AbQBuwUAAfIDlwR3A5cB8ggAAboB3AG6CQAB8gFvAeMIbwHyBQAB8wG0AQkBGQG7AxkBtAHzBgAB8giX
+        AfIHAAEJA7oBCQEAAboIAAHyAm8E4wJvAfIGAAH/AfEBugIJARkBCQG6AfEB/wcAAf8BCAGYApcBmAEI
+        Af8IAAHbAdwB2w0AAf8BGgGTAm8BkwEaAf8IAAH/AfQBCQLbAQkB9AH/GAABCQHbAQkBAAHbFwABQgFN
+        AT4HAAE+AwABKAMAAUADAAEwAwABAQEAAQEFAAGAAQEWAAP/AQABgAEBBgABgAEBBgAB4AEHBgABwAED
+        BgABgAEBBgABgAEBBgABgAEBBgABgAEBBgABgAEBBgABgAEBBgABgAEBBgABgAEBBgABwAEDBgAB4AEH
+        BgAB8AEPBgAC/wYAAv8B4AEBAv8BgAEDAv8B4AEBAv8BgQH/AcABBwH+AQMCAAHwAV8BwAEHAf4BAwIA
+        AfwBfwHhAQ8B4AEDAcABAQHwAR8B4QEPAcABAwHAAQAB8AEfAeEBDwHAAQcBwwGAAfABHwHhAQ8BwAFf
+        AccB4wHwAR8B4QEPAcABfwHHAeMB8AEfAeEBDwHAAQ8BxwHjAYABAwHhAQ8BwAEHAQEBwwGAAQMB4QEP
+        AfwBBwEAAQMBwAEHAeEBDwH8AQcBgAEDAeABDwHhAQ8B/AEHAcQBAwHwAR8C/wH8AQcC/wH4AT8C/wH+
+        AQcC/wH8AX8CAAGAAQEBwAEHAYABAQIAAYABAQHAAQcBgAEBAgAB4AEHAfABHwHgAQcCAAHAAQMB4AEP
+        AcABAwIAAYABAQHAAQcBgAEBAgABgAEBAYABAwGAAQECAAGAAQEBgAEDAYABAQIAAYABAQHwAR8BgAEB
+        AgABgAEBAfABHwGAAQECAAGAAQEB8AEfAYABAQGAAQEBgAEBAfABHwGAAQEB4AEHAYABAQHwAR8BgAEB
+        AeABBwHAAQMB/AF/AcABAwHgAQcB4AEHAfABXwHgAQcB4AEHAfABDwHxAf8B8AEPAfABDwL/AfEBfwL/
+        Cw==
+</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="olvMain.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;olvMain.Name" xml:space="preserve">
+    <value>olvMain</value>
+  </data>
+  <data name="&gt;&gt;olvMain.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.DataListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;olvMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;olvMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblTest.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="lblTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="lblTest.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblTest.Text" xml:space="preserve">
+    <value>test label</value>
+  </data>
+  <data name="&gt;&gt;lblTest.Name" xml:space="preserve">
+    <value>lblTest</value>
+  </data>
+  <data name="&gt;&gt;lblTest.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTest.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblTest.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>957, 325</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>NeoTransmission</value>
+  </data>
+  <data name="&gt;&gt;olvclOrder.Name" xml:space="preserve">
+    <value>olvclOrder</value>
+  </data>
+  <data name="&gt;&gt;olvclOrder.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;olvcName.Name" xml:space="preserve">
+    <value>olvcName</value>
+  </data>
+  <data name="&gt;&gt;olvcName.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;olvcSize.Name" xml:space="preserve">
+    <value>olvcSize</value>
+  </data>
+  <data name="&gt;&gt;olvcSize.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;olvcProgress.Name" xml:space="preserve">
+    <value>olvcProgress</value>
+  </data>
+  <data name="&gt;&gt;olvcProgress.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;olvcState.Name" xml:space="preserve">
+    <value>olvcState</value>
+  </data>
+  <data name="&gt;&gt;olvcState.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;olvcSeeds.Name" xml:space="preserve">
+    <value>olvcSeeds</value>
+  </data>
+  <data name="&gt;&gt;olvcSeeds.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;olvcPeers.Name" xml:space="preserve">
+    <value>olvcPeers</value>
+  </data>
+  <data name="&gt;&gt;olvcPeers.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;imglStates.Name" xml:space="preserve">
+    <value>imglStates</value>
+  </data>
+  <data name="&gt;&gt;imglStates.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
