@@ -175,7 +175,7 @@
     <value>stateListBox</value>
   </data>
   <data name="&gt;&gt;stateListBox.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.GListBox, Transmission Remote, Version=3.25.6768.42176, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.GListBox, Transmission Remote, Version=3.25.7223.38078, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;stateListBox.Parent" xml:space="preserve">
     <value>mainVerticalSplitContainer.Panel1</value>
@@ -280,7 +280,7 @@
     <value>torrentListView</value>
   </data>
   <data name="&gt;&gt;torrentListView.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.ListViewNf, Transmission Remote, Version=3.25.6768.42176, Culture=neutral, PublicKeyToken=null</value>
+    <value>BrightIdeasSoftware.ObjectListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentListView.Parent" xml:space="preserve">
     <value>mainVerticalSplitContainer.Panel2</value>
@@ -388,7 +388,7 @@
     <value>piecesGraph</value>
   </data>
   <data name="&gt;&gt;piecesGraph.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.PiecesGraph, Transmission Remote, Version=3.25.6768.42176, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.PiecesGraph, Transmission Remote, Version=3.25.7223.38078, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;piecesGraph.Parent" xml:space="preserve">
     <value>progressOrPiecesPanel</value>
@@ -505,7 +505,7 @@
     <value>generalTorrentInfo</value>
   </data>
   <data name="&gt;&gt;generalTorrentInfo.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.TorrentGeneralInfo, Transmission Remote, Version=3.25.6768.42176, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.TorrentGeneralInfo, Transmission Remote, Version=3.25.7223.38078, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;generalTorrentInfo.Parent" xml:space="preserve">
     <value>generalTableLayoutPanel</value>
@@ -634,7 +634,7 @@
     <value>trackersListView</value>
   </data>
   <data name="&gt;&gt;trackersListView.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.ListViewNf, Transmission Remote, Version=3.25.6768.42176, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.ListViewNf, Transmission Remote, Version=3.25.7223.38078, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;trackersListView.Parent" xml:space="preserve">
     <value>trackersTorrentNameGroupBox</value>
@@ -754,7 +754,7 @@
     <value>filesListView</value>
   </data>
   <data name="&gt;&gt;filesListView.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.ListViewNf, Transmission Remote, Version=3.25.6768.42176, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.ListViewNf, Transmission Remote, Version=3.25.7223.38078, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;filesListView.Parent" xml:space="preserve">
     <value>filesTableLayoutPanel</value>
@@ -991,7 +991,7 @@
     <value>peersListView</value>
   </data>
   <data name="&gt;&gt;peersListView.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.ListViewNf, Transmission Remote, Version=3.25.6768.42176, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.ListViewNf, Transmission Remote, Version=3.25.7223.38078, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;peersListView.Parent" xml:space="preserve">
     <value>peersTorrentNameGroupBox</value>
@@ -1264,7 +1264,7 @@
     <value>speedGraph</value>
   </data>
   <data name="&gt;&gt;speedGraph.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.Graphing.C2DPushGraph, Transmission Remote, Version=3.25.6768.42176, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.Graphing.C2DPushGraph, Transmission Remote, Version=3.25.7223.38078, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;speedGraph.Parent" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
@@ -1417,7 +1417,7 @@
     <value>torrentAndTabsSplitContainer</value>
   </data>
   <data name="&gt;&gt;torrentAndTabsSplitContainer.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.SplitContainerFix, Transmission Remote, Version=3.25.6768.42176, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.SplitContainerFix, Transmission Remote, Version=3.25.7223.38078, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;torrentAndTabsSplitContainer.Parent" xml:space="preserve">
     <value>toolStripContainer1.ContentPanel</value>
@@ -2242,7 +2242,7 @@
     <value>False</value>
   </data>
   <data name="torrentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 20</value>
+    <value>56, 20</value>
   </data>
   <data name="torrentToolStripMenuItem.Text" xml:space="preserve">
     <value>Torrent</value>
@@ -2287,28 +2287,28 @@
     <value>Ctrl+E</value>
   </data>
   <data name="showErrorLogToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 22</value>
+    <value>222, 22</value>
   </data>
   <data name="showErrorLogToolStripMenuItem.Text" xml:space="preserve">
     <value>Show Error Log</value>
   </data>
   <data name="helpMenuToolStripSeparator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 6</value>
+    <value>219, 6</value>
   </data>
   <data name="projectSiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 22</value>
+    <value>222, 22</value>
   </data>
   <data name="projectSiteToolStripMenuItem.Text" xml:space="preserve">
     <value>Project site</value>
   </data>
   <data name="checkForNewVersionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 22</value>
+    <value>222, 22</value>
   </data>
   <data name="checkForNewVersionToolStripMenuItem.Text" xml:space="preserve">
     <value>Check for new version</value>
   </data>
   <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 22</value>
+    <value>222, 22</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>About Transmission Remote</value>
@@ -2705,91 +2705,91 @@
     <value>torrentNameCol</value>
   </data>
   <data name="&gt;&gt;torrentNameCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentNoCol.Name" xml:space="preserve">
     <value>torrentNoCol</value>
   </data>
   <data name="&gt;&gt;torrentNoCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentSizeCol.Name" xml:space="preserve">
     <value>torrentSizeCol</value>
   </data>
   <data name="&gt;&gt;torrentSizeCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentDoneCol.Name" xml:space="preserve">
     <value>torrentDoneCol</value>
   </data>
   <data name="&gt;&gt;torrentDoneCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentStatusCol.Name" xml:space="preserve">
     <value>torrentStatusCol</value>
   </data>
   <data name="&gt;&gt;torrentStatusCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentSeedsCol.Name" xml:space="preserve">
     <value>torrentSeedsCol</value>
   </data>
   <data name="&gt;&gt;torrentSeedsCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentLeechersCol.Name" xml:space="preserve">
     <value>torrentLeechersCol</value>
   </data>
   <data name="&gt;&gt;torrentLeechersCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentDownSpeedCol.Name" xml:space="preserve">
     <value>torrentDownSpeedCol</value>
   </data>
   <data name="&gt;&gt;torrentDownSpeedCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentUpSpeedCol.Name" xml:space="preserve">
     <value>torrentUpSpeedCol</value>
   </data>
   <data name="&gt;&gt;torrentUpSpeedCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentEtaCol.Name" xml:space="preserve">
     <value>torrentEtaCol</value>
   </data>
   <data name="&gt;&gt;torrentEtaCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentUploadedCol.Name" xml:space="preserve">
     <value>torrentUploadedCol</value>
   </data>
   <data name="&gt;&gt;torrentUploadedCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentRatioCol.Name" xml:space="preserve">
     <value>torrentRatioCol</value>
   </data>
   <data name="&gt;&gt;torrentRatioCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentAddedAt.Name" xml:space="preserve">
     <value>torrentAddedAt</value>
   </data>
   <data name="&gt;&gt;torrentAddedAt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentCompletedAtCol.Name" xml:space="preserve">
     <value>torrentCompletedAtCol</value>
   </data>
   <data name="&gt;&gt;torrentCompletedAtCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;torrentTrackerCol.Name" xml:space="preserve">
     <value>torrentTrackerCol</value>
   </data>
   <data name="&gt;&gt;torrentTrackerCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;trackersTierCol.Name" xml:space="preserve">
     <value>trackersTierCol</value>
@@ -2837,43 +2837,43 @@
     <value>filesPathCol</value>
   </data>
   <data name="&gt;&gt;filesPathCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;filesTypeCol.Name" xml:space="preserve">
     <value>filesTypeCol</value>
   </data>
   <data name="&gt;&gt;filesTypeCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;filesSizeCol.Name" xml:space="preserve">
     <value>filesSizeCol</value>
   </data>
   <data name="&gt;&gt;filesSizeCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;filesDoneCol.Name" xml:space="preserve">
     <value>filesDoneCol</value>
   </data>
   <data name="&gt;&gt;filesDoneCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;filesPercentCol.Name" xml:space="preserve">
     <value>filesPercentCol</value>
   </data>
   <data name="&gt;&gt;filesPercentCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;filesSkipCol.Name" xml:space="preserve">
     <value>filesSkipCol</value>
   </data>
   <data name="&gt;&gt;filesSkipCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;filesPriorityCol.Name" xml:space="preserve">
     <value>filesPriorityCol</value>
   </data>
   <data name="&gt;&gt;filesPriorityCol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;fileIconImageList.Name" xml:space="preserve">
     <value>fileIconImageList</value>
@@ -3455,6 +3455,6 @@
     <value>MainWindow</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>TransmissionRemoteDotnet.CustomControls.CultureForm, Transmission Remote, Version=3.25.6768.42176, Culture=neutral, PublicKeyToken=null</value>
+    <value>TransmissionRemoteDotnet.CustomControls.CultureForm, Transmission Remote, Version=3.25.7223.38078, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

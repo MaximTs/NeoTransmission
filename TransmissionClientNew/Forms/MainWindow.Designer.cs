@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using System.Windows.Forms;
+using BrightIdeasSoftware;
 using TransmissionRemoteDotnet.CustomControls;
 using TransmissionRemoteDotnet.CustomControls.Graphing;
 
@@ -40,22 +41,22 @@ namespace TransmissionRemoteDotnet.Forms
             this.mainVerticalSplitContainer = new System.Windows.Forms.SplitContainer();
             this.stateListBox = new TransmissionRemoteDotnet.CustomControls.GListBox();
             this.stateListBoxImageList = new System.Windows.Forms.ImageList(this.components);
-            this.torrentListView = new TransmissionRemoteDotnet.CustomControls.ListViewNf();
-            this.torrentNameCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentNoCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentSizeCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentDoneCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentStatusCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentSeedsCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentLeechersCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentDownSpeedCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentUpSpeedCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentEtaCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentUploadedCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentRatioCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentAddedAt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentCompletedAtCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.torrentTrackerCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.torrentListView = new BrightIdeasSoftware.ObjectListView();
+            this.torrentNameCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentNoCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentSizeCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentDoneCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentStatusCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentSeedsCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentLeechersCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentDownSpeedCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentUpSpeedCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentEtaCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentUploadedCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentRatioCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentAddedAt = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentCompletedAtCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.torrentTrackerCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.torrentTabControl = new System.Windows.Forms.TabControl();
             this.generalTabPage = new System.Windows.Forms.TabPage();
             this.generalTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -79,13 +80,13 @@ namespace TransmissionRemoteDotnet.Forms
             this.filesTorrentNameGroupBox = new System.Windows.Forms.GroupBox();
             this.filesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.filesListView = new TransmissionRemoteDotnet.CustomControls.ListViewNf();
-            this.filesPathCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.filesTypeCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.filesSizeCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.filesDoneCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.filesPercentCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.filesSkipCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.filesPriorityCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.filesPathCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.filesTypeCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.filesSizeCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.filesDoneCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.filesPercentCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.filesSkipCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.filesPriorityCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.fileIconImageList = new System.Windows.Forms.ImageList(this.components);
             this.filesFilterTextBox = new System.Windows.Forms.TextBox();
             this.filesFilterLabel = new System.Windows.Forms.Label();
@@ -209,6 +210,7 @@ namespace TransmissionRemoteDotnet.Forms
             this.mainVerticalSplitContainer.Panel1.SuspendLayout();
             this.mainVerticalSplitContainer.Panel2.SuspendLayout();
             this.mainVerticalSplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.torrentListView)).BeginInit();
             this.torrentTabControl.SuspendLayout();
             this.generalTabPage.SuspendLayout();
             this.generalTableLayoutPanel.SuspendLayout();
@@ -297,6 +299,7 @@ namespace TransmissionRemoteDotnet.Forms
             // torrentListView
             // 
             this.torrentListView.AllowColumnReorder = true;
+            this.torrentListView.CellEditUseWholeCell = false;
             this.torrentListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.torrentNameCol,
             this.torrentNoCol,
@@ -313,6 +316,7 @@ namespace TransmissionRemoteDotnet.Forms
             this.torrentAddedAt,
             this.torrentCompletedAtCol,
             this.torrentTrackerCol});
+            this.torrentListView.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.torrentListView, "torrentListView");
             this.torrentListView.FullRowSelect = true;
             this.torrentListView.HideSelection = false;
@@ -1500,6 +1504,7 @@ namespace TransmissionRemoteDotnet.Forms
             this.mainVerticalSplitContainer.Panel1.ResumeLayout(false);
             this.mainVerticalSplitContainer.Panel2.ResumeLayout(false);
             this.mainVerticalSplitContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.torrentListView)).EndInit();
             this.torrentTabControl.ResumeLayout(false);
             this.generalTabPage.ResumeLayout(false);
             this.generalTableLayoutPanel.ResumeLayout(false);
@@ -1546,28 +1551,28 @@ namespace TransmissionRemoteDotnet.Forms
         private ToolStripButton addTorrentButton;
         private TabPage trackersTabPage;
         private TabPage filesTabPage;
-        private ColumnHeader filesPathCol;
-        private ColumnHeader filesTypeCol;
-        private ColumnHeader filesSizeCol;
-        private ColumnHeader filesDoneCol;
-        private ColumnHeader filesPercentCol;
-        private ColumnHeader filesSkipCol;
-        private ColumnHeader filesPriorityCol;
-        private ColumnHeader torrentNameCol;
-        private ColumnHeader torrentNoCol;
-        private ColumnHeader torrentSizeCol;
-        private ColumnHeader torrentDoneCol;
-        private ColumnHeader torrentStatusCol;
-        private ColumnHeader torrentSeedsCol;
-        private ColumnHeader torrentLeechersCol;
-        private ColumnHeader torrentDownSpeedCol;
-        private ColumnHeader torrentUpSpeedCol;
-        private ColumnHeader torrentEtaCol;
-        private ColumnHeader torrentUploadedCol;
-        private ColumnHeader torrentRatioCol;
-        private ColumnHeader torrentAddedAt;
-        private ColumnHeader torrentCompletedAtCol;
-        private ColumnHeader torrentTrackerCol;
+        private OLVColumn filesPathCol;
+        private OLVColumn filesTypeCol;
+        private OLVColumn filesSizeCol;
+        private OLVColumn filesDoneCol;
+        private OLVColumn filesPercentCol;
+        private OLVColumn filesSkipCol;
+        private OLVColumn filesPriorityCol;
+        private OLVColumn torrentNameCol;
+        private OLVColumn torrentNoCol;
+        private OLVColumn torrentSizeCol;
+        private OLVColumn torrentDoneCol;
+        private OLVColumn torrentStatusCol;
+        private OLVColumn torrentSeedsCol;
+        private OLVColumn torrentLeechersCol;
+        private OLVColumn torrentDownSpeedCol;
+        private OLVColumn torrentUpSpeedCol;
+        private OLVColumn torrentEtaCol;
+        private OLVColumn torrentUploadedCol;
+        private OLVColumn torrentRatioCol;
+        private OLVColumn torrentAddedAt;
+        private OLVColumn torrentCompletedAtCol;
+        private OLVColumn torrentTrackerCol;
         private ToolStripButton disconnectButton;
         private ToolStripButton addWebTorrentButton;
         private ToolStripSeparator toolbarToolStripSeparator2;
@@ -1588,7 +1593,7 @@ namespace TransmissionRemoteDotnet.Forms
         private ToolStripStatusLabel toolStripVersionLabel;
         private NotifyIcon notifyIcon;
         private ToolStripSeparator toolbarToolStripSeparator1;
-        public ListViewNf torrentListView;
+        public ObjectListView torrentListView;
         private ToolStripMenuItem localSettingsToolStripMenuItem;
         private ToolStripMenuItem remoteSettingsToolStripMenuItem;
         public GListBox stateListBox;
