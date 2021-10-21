@@ -1539,8 +1539,7 @@ namespace TransmissionRemoteDotnet.Forms
             }
             torrentListView.Sort();
 #if !MONO
-            // TODO: Is this needed or not?
-            //torrentListView.SetSortIcon(_lvwColumnSorter.SortColumn, _lvwColumnSorter.Order);
+            torrentListView.SetSortIcon(_lvwColumnSorter.SortColumn, _lvwColumnSorter.Order);
 #endif
             Toolbox.StripeListView(torrentListView);
         }
