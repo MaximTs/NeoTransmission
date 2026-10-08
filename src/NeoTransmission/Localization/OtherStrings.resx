@@ -472,10 +472,22 @@
     <value>Sample mapping:</value>
   </data>
   <data name="SambaShare" xml:space="preserve">
-    <value>Samba share:</value>
+    <value>Local path:</value>
   </data>
   <data name="UnixPathPrefix" xml:space="preserve">
-    <value>UNIX path prefix:</value>
+    <value>Remote path prefix:</value>
+  </data>
+  <data name="LocalPath" xml:space="preserve">
+    <value>Local path:</value>
+  </data>
+  <data name="RemotePathPrefix" xml:space="preserve">
+    <value>Remote path prefix:</value>
+  </data>
+  <data name="RemotePathExists" xml:space="preserve">
+    <value>Remote path prefix already exists.</value>
+  </data>
+  <data name="PathMappingHelp" xml:space="preserve">
+    <value>Enter each path exactly as it is used by that system. Use \ for Windows paths and / for Unix paths.</value>
   </data>
   <data name="OpenImageFilter" xml:space="preserve">
     <value>PNG Image|*.png</value>

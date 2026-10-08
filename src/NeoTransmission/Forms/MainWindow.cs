@@ -918,6 +918,7 @@ namespace NeoTransmission.Forms
                 senderMi.Checked = true;
                 settings.Locale = culture.Name;
                 Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = culture;
+                settings.Commit();
                 Program.CultureChanger.ApplyCulture(culture);
                 InitStaticContextMenus();
                 torrentListView_SelectedIndexChanged(null, null);
@@ -1959,7 +1960,7 @@ namespace NeoTransmission.Forms
             }
             else
                 generalTorrentInfo.PiecesInfo = $"{t.PieceCount} x {Toolbox.GetFileSize(t.PieceSize)}";
-            generalTorrentInfo.TorrentLocation = t.DownloadDir + "/" + t.TorrentName;
+            generalTorrentInfo.TorrentLocation = Toolbox.CombineRemotePath(t.DownloadDir, t.TorrentName);
             percentageLabel.Text = t.Percentage + "%";
             if (t.TotalSize == t.SizeWhenDone)
                 generalTorrentInfo.TotalSize = string.Format(OtherStrings.TotalDoneValidSize, Toolbox.GetFileSize(t.SizeWhenDone), t.HaveTotalString, Toolbox.GetFileSize(t.HaveValid));
@@ -2345,7 +2346,7 @@ namespace NeoTransmission.Forms
                             Program.Settings.Current.Host,
                             string.Format(
                                 Program.Settings.Current.PlinkCmd.Replace("$DATA", "{0}").Replace("$TORRENTID", t.Id.ToString()),
-                                string.Format("{0}{1}{2}", t.DownloadDir, !t.DownloadDir.EndsWith("/") ? "/" : null, t.TorrentName))
+                                Toolbox.CombineRemotePath(t.DownloadDir, t.TorrentName))
                         ));
                 }
                 catch (Exception ex)
@@ -2415,7 +2416,8 @@ namespace NeoTransmission.Forms
                 {
                     try
                     {
-                        BackgroundProcessStart(new ProcessStartInfo(sambaPath + "\\" + t.TorrentName));
+                        string path = t.Files.Count > 1 ? sambaPath : Toolbox.CombineRemotePath(sambaPath, t.TorrentName);
+                        BackgroundProcessStart(new ProcessStartInfo(path));
                     }
                     catch (Exception ex)
                     {

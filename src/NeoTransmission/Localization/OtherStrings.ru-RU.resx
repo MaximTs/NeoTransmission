@@ -207,10 +207,22 @@
     <value>Пример привязки:</value>
   </data>
   <data name="SambaShare" xml:space="preserve">
-    <value>Префикс Win-пути (SMB):</value>
+    <value>Локальный путь:</value>
   </data>
   <data name="UnixPathPrefix" xml:space="preserve">
-    <value>Префикс Unix-пути:</value>
+    <value>Префикс удалённого пути:</value>
+  </data>
+  <data name="LocalPath" xml:space="preserve">
+    <value>Локальный путь:</value>
+  </data>
+  <data name="RemotePathPrefix" xml:space="preserve">
+    <value>Префикс удалённого пути:</value>
+  </data>
+  <data name="RemotePathExists" xml:space="preserve">
+    <value>Такой префикс удалённого пути уже существует.</value>
+  </data>
+  <data name="PathMappingHelp" xml:space="preserve">
+    <value>Указывайте каждый путь точно в формате соответствующей системы. Для Windows используйте \, для Unix — /.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Отмена</value>

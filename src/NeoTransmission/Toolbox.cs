@@ -40,8 +40,6 @@ namespace NeoTransmission
 
         #region Fields
         // TODO: Move same checks to save settings.
-        private const string UnixPathDelimiter = "/";
-        private const string WinPathDelimiter = "\\";
         private const int StripeOffset = 15;
 
         public static readonly NumberFormatInfo NumberFormat;
@@ -536,10 +534,10 @@ namespace NeoTransmission
             return false;
         }
         /// <summary>
-        /// Renames a subkey of the passed in registry key since 
+        /// Renames a subkey of the passed in registry key since
         /// the Framework totally forgot to include such a handy feature.
         /// </summary>
-        /// <param name="parentKey">The RegistryKey that contains the subkey 
+        /// <param name="parentKey">The RegistryKey that contains the subkey
         /// you want to rename (must be writeable)</param>
         /// <param name="subKeyName">The name of the subkey that you want to rename
         /// </param>
@@ -585,9 +583,9 @@ namespace NeoTransmission
                 destinationKey.SetValue(valueName, objValue, valKind);
             }
 
-            //For Each subKey 
-            //Create a new subKey in destinationKey 
-            //Call myself 
+            //For Each subKey
+            //Create a new subKey in destinationKey
+            //Call myself
             foreach (string sourceSubKeyName in sourceKey.GetSubKeyNames())
             {
                 using (RegistryKey sourceSubKey = sourceKey.OpenSubKey(sourceSubKeyName))
@@ -607,7 +605,7 @@ namespace NeoTransmission
         /// </summary>
         /// <param name="originalString">The original string.</param>
         /// <returns>The encrypted string.</returns>
-        /// <exception cref="ArgumentNullException">This exception will be 
+        /// <exception cref="ArgumentNullException">This exception will be
         /// thrown when the original string is null or empty.</exception>
         public static string Encrypt(string originalString)
         {
@@ -633,7 +631,7 @@ namespace NeoTransmission
         /// </summary>
         /// <param name="cryptedString">The crypted string.</param>
         /// <returns>The decrypted string.</returns>
-        /// <exception cref="ArgumentNullException">This exception will be thrown 
+        /// <exception cref="ArgumentNullException">This exception will be thrown
         /// when the crypted string is null or empty.</exception>
         public static string Decrypt(string cryptedString)
         {
@@ -651,50 +649,98 @@ namespace NeoTransmission
             return reader.ReadToEnd();
         }
 
-        #region ConvertSambaPaths
+        #region ConvertMappedPaths
+        private const string UnixPathDelimiter = "/";
+        private const string WinPathDelimiter = "\\";
+
         public static string ConvertUnixPathToWinPath(string path)
         {
+            string convertedPath;
+            TryConvertUnixPathToWinPath(path, out convertedPath);
+            return convertedPath;
+        }
 
-            var mappings = Program.Settings.Current.SambaShareMappings;
-
-            foreach (var row in mappings)
-            {
-                string key = row.Key;
-                string value = row.Value;
-
-                if (!key.EndsWith(UnixPathDelimiter))
-                    key += UnixPathDelimiter;
-                if (!value.EndsWith(WinPathDelimiter))
-                    value += WinPathDelimiter;
-
-                path = path.Replace(key, value);
-            }
-
-            path = path.Replace("/", "\\");
-
-            return path;
+        public static bool TryConvertUnixPathToWinPath(string path, out string convertedPath)
+        {
+            bool isMapped = TryConvertMappedPath(path, false, out convertedPath);
+            convertedPath = convertedPath.Replace(UnixPathDelimiter, WinPathDelimiter);
+            return isMapped;
         }
 
         public static string ConvertWinPathToUnixPath(string path)
         {
-            var mappings = Program.Settings.Current.SambaShareMappings;
+            string convertedPath;
+            if (!TryConvertMappedPath(path, true, out convertedPath))
+                convertedPath = path;
+            return convertedPath.Replace(WinPathDelimiter, UnixPathDelimiter);
+        }
 
+        private static bool TryConvertMappedPath(string path, bool isReverse, out string convertedPath)
+        {
+            var mappings = Program.Settings.Current.SambaShareMappings;
+            string source = null;
+            string target = null;
             foreach (var row in mappings)
             {
-                string key = row.Key;
-                string value = row.Value;
-
-                if (!key.EndsWith(UnixPathDelimiter))
-                    key += UnixPathDelimiter;
-                if (!value.EndsWith(WinPathDelimiter))
-                    value += WinPathDelimiter;
-
-                path = path.Replace(value, key);
+                string candidateSource = isReverse ? row.Value : row.Key;
+                if (HasPathPrefix(path, candidateSource)
+                    && (source == null || candidateSource.TrimEnd('/', '\\').Length > source.TrimEnd('/', '\\').Length))
+                {
+                    source = candidateSource;
+                    target = isReverse ? row.Key : row.Value;
+                }
             }
 
-            path = path.Replace("\\", "/");
+            if (source == null)
+            {
+                convertedPath = path;
+                return false;
+            }
 
-            return path;
+            convertedPath = ReplacePathPrefix(path, source, target, !isReverse);
+            return true;
+        }
+
+        private static bool HasPathPrefix(string path, string sourcePrefix)
+        {
+            if (string.IsNullOrEmpty(path) || string.IsNullOrEmpty(sourcePrefix))
+                return false;
+
+            string normalizedPath = path.Replace('\\', '/');
+            string source = sourcePrefix.Replace('\\', '/').TrimEnd('/');
+            if (source.Length == 0)
+                return false;
+
+            bool isExact = normalizedPath.Equals(source, StringComparison.OrdinalIgnoreCase);
+            bool isChild = normalizedPath.StartsWith(source + "/", StringComparison.OrdinalIgnoreCase);
+            return isExact || isChild;
+        }
+
+        private static string ReplacePathPrefix(string path, string sourcePrefix, string targetPrefix, bool isTargetWindows)
+        {
+            string normalizedPath = path.Replace('\\', '/');
+            string source = sourcePrefix.Replace('\\', '/').TrimEnd('/');
+            string target = targetPrefix.Replace('\\', '/').TrimEnd('/');
+
+            string suffix = normalizedPath.Length == source.Length ? string.Empty : normalizedPath.Substring(source.Length);
+            string result = target + suffix;
+            return isTargetWindows ? result.Replace('/', '\\') : result;
+        }
+
+        public static string CombineRemotePath(string directory, string name)
+        {
+            if (string.IsNullOrEmpty(directory))
+                return name;
+            string separator = IsWindowsPath(directory) ? "\\" : "/";
+            return directory.TrimEnd('/', '\\') + separator + name;
+        }
+
+        private static bool IsWindowsPath(string path)
+        {
+            return !string.IsNullOrEmpty(path)
+                && ((path.Length > 1 && path[1] == ':')
+                || path.StartsWith("\\\\")
+                || path.StartsWith("//"));
         }
         #endregion
 

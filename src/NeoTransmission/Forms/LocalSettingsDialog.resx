@@ -3352,7 +3352,7 @@
     <value>0</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
-    <value>Unix path prefix:</value>
+    <value>Remote path prefix:</value>
   </data>
   <data name="&gt;&gt;label11.Name" xml:space="preserve">
     <value>label11</value>
@@ -3433,7 +3433,7 @@
     <value>2</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
-    <value>Win path prefix (SMB):</value>
+    <value>Local path:</value>
   </data>
   <data name="&gt;&gt;label14.Name" xml:space="preserve">
     <value>label14</value>

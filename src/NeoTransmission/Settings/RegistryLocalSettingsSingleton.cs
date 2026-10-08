@@ -802,7 +802,7 @@ namespace NeoTransmission.Settings
         public void AddSambaMapping(string unixPrefix, string sambaPrefix)
         {
             JsonObject mappings = this.SambaShareMappings;
-            mappings[unixPrefix] = sambaPrefix.EndsWith(@"\") ? sambaPrefix.Substring(0, sambaPrefix.Length - 1) : sambaPrefix;
+            mappings[unixPrefix] = sambaPrefix;
             this.SambaShareMappings = mappings;
         }
     }

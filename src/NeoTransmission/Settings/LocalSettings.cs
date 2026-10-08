@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using Jayrock.Json;
 using Jayrock.Json.Conversion;
 using System.Windows.Forms;
@@ -469,9 +468,8 @@ namespace NeoTransmission.Settings
 
         public bool AddSambaMapping(string unixPrefix, string sambaPrefix)
         {
-            if (!unixPrefix.EndsWith("/")) unixPrefix += "/";
             if (SambaShareMappings.ContainsKey(unixPrefix)) return false;
-            SambaShareMappings[unixPrefix] = sambaPrefix.TrimEnd(Path.DirectorySeparatorChar);
+            SambaShareMappings[unixPrefix] = sambaPrefix;
             return true;
         }
 

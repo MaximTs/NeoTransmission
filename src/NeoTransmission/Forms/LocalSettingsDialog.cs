@@ -75,8 +75,15 @@ namespace NeoTransmission.Forms
         {
             string sambaSample = $@"{OtherStrings.MappingSample}
 
-{OtherStrings.UnixPathPrefix} /mnt/transmission
-{OtherStrings.SambaShare} \\routerName\hddName\transmission";
+Windows:
+{OtherStrings.RemotePathPrefix} D:\Movies\
+{OtherStrings.LocalPath} M:\Movies\
+
+Unix:
+{OtherStrings.RemotePathPrefix} /mnt/transmission/
+{OtherStrings.LocalPath} \\server\share\transmission\
+
+{OtherStrings.PathMappingHelp}";
 
             toolTip.SetToolTip(MappingHelpButton, sambaSample);
             toolTip.SetToolTip(useLocalCookiesWarningButton, OtherStrings.UpgradeNote);
@@ -306,16 +313,16 @@ namespace NeoTransmission.Forms
 
         private void AddShareButton_Click(object sender, EventArgs e)
         {
-            string unixPath = Path.GetDirectoryName(UnixPathPrefixTextBox.Text + "/")?.Replace(Path.DirectorySeparatorChar, '/') + "/";
-            string sambaShare = SambaShareTextBox.Text.Replace('/', Path.DirectorySeparatorChar).TrimEnd(Path.DirectorySeparatorChar);
-            if (!listSambaShareMappings.Items.Contains(unixPath))
+            string remotePath = UnixPathPrefixTextBox.Text.Trim();
+            string localPath = SambaShareTextBox.Text.Trim();
+            if (!listSambaShareMappings.Items.Contains(remotePath))
             {
-                listSambaShareMappings.Items.Add(new SambaShareMappings(unixPath, sambaShare));
+                listSambaShareMappings.Items.Add(new SambaShareMappings(remotePath, localPath));
                 UnixPathPrefixTextBox.Clear();
                 SambaShareTextBox.Clear();
             }
             else
-                MessageBox.Show(OtherStrings.UnixPathExists, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(OtherStrings.RemotePathExists, OtherStrings.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void listSambaShareMappings_DoubleClick(object sender, EventArgs e)

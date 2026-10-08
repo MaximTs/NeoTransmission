@@ -689,6 +689,30 @@ namespace NeoTransmission.Localization {
                 return ResourceManager.GetString("MappingSample", resourceCulture);
             }
         }
+
+        internal static string LocalPath {
+            get {
+                return ResourceManager.GetString("LocalPath", resourceCulture);
+            }
+        }
+
+        internal static string RemotePathExists {
+            get {
+                return ResourceManager.GetString("RemotePathExists", resourceCulture);
+            }
+        }
+
+        internal static string RemotePathPrefix {
+            get {
+                return ResourceManager.GetString("RemotePathPrefix", resourceCulture);
+            }
+        }
+
+        internal static string PathMappingHelp {
+            get {
+                return ResourceManager.GetString("PathMappingHelp", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Megabyte.

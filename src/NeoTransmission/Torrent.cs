@@ -520,13 +520,12 @@ namespace NeoTransmission
         {
             get
             {
-                string downloadDir = DownloadDir;
-                string name = Files.Count > 1 ? TorrentName : string.Empty;
-                Dictionary<string, string> mappings = Program.Settings.Current.SambaShareMappings;
-                foreach (string key in mappings.Keys)
-                    if (downloadDir.StartsWith(key))
-                        return $"{mappings[key]}\\{(downloadDir.Length > key.Length ? downloadDir.Substring(key.Length).Replace("/", "\\") + "\\" : null)}{name}";
-                return null;
+                string path;
+                if (!Toolbox.TryConvertUnixPathToWinPath(DownloadDir, out path))
+                    return null;
+                if (Files.Count > 1)
+                    path = path.TrimEnd('\\') + "\\" + TorrentName;
+                return path;
             }
         }
 
