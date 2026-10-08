@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Raccoom.Xml/Raccoom.Xml.csproj" />
+  <Project Path="TransmissionClientNew/TransmissionRemoteDotnet.csproj" />
+</Solution>
