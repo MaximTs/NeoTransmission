@@ -1,0 +1,1194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4691616B-6112-4361-B5FA-F44176844B54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NeoTransmission</RootNamespace>
+    <AssemblyName>NeoTransmission</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>transmission_large.ico</ApplicationIcon>
+    <SignManifests>false</SignManifests>
+    <SignAssembly>false</SignAssembly>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>false</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Jayrock, Version=0.9.8316.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Jayrock\$(Configuration)\Jayrock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Jayrock.Json, Version=0.9.8316.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Jayrock\$(Configuration)\Jayrock.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comparers\ListViewItemDoubleComparer.cs" />
+    <Compile Include="Comparers\RssItemsListViewColumnSorter.cs" />
+    <Compile Include="Comparers\TorrentFilesListViewItemSorter.cs" />
+    <Compile Include="CustomControls\2DPushGraph.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fixes.cs" />
+    <Compile Include="Forms\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArgumentsReceivedEventArgs.cs" />
+    <Compile Include="ClassSingleton.cs" />
+    <Compile Include="CommandFactory.cs" />
+    <Compile Include="Commands\ErrorCommand.cs" />
+    <Compile Include="Commands\NoCommand.cs" />
+    <Compile Include="Commands\PortTestCommand.cs" />
+    <Compile Include="Commands\SessionCommand.cs" />
+    <Compile Include="Commands\SessionStatsCommand.cs" />
+    <Compile Include="Commands\TorrentGetCommand.cs" />
+    <Compile Include="Commands\UpdateBlocklistCommand.cs" />
+    <Compile Include="Commands\UpdateFilesCommand.cs" />
+    <Compile Include="Comparers\IListViewItemSorter.cs" />
+    <Compile Include="Comparers\ListViewDateTimeComparer.cs" />
+    <Compile Include="Comparers\ListViewItemIPComparer.cs" />
+    <Compile Include="Comparers\ListViewItemDecimalComparer.cs" />
+    <Compile Include="Comparers\ListViewItemInt64Comparer.cs" />
+    <Compile Include="Comparers\ListViewTextComparer.cs" />
+    <Compile Include="Comparers\ListViewTextInsensitiveReverseComparer.cs" />
+    <Compile Include="Comparers\ListViewItemInt32Comparer.cs" />
+    <Compile Include="CustomControls\FileBrowseTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\PaintDotNet\Memory.cs" />
+    <Compile Include="CustomControls\PaintDotNet\NativeConstants.cs" />
+    <Compile Include="CustomControls\PaintDotNet\NativeDelegates.cs" />
+    <Compile Include="CustomControls\PaintDotNet\NativeErrors.cs" />
+    <Compile Include="CustomControls\PaintDotNet\NativeInterfaces.cs" />
+    <Compile Include="CustomControls\PaintDotNet\NativeMethods.cs" />
+    <Compile Include="CustomControls\PaintDotNet\NativeStructs.cs" />
+    <Compile Include="CustomControls\PaintDotNet\OS.cs" />
+    <Compile Include="CustomControls\PaintDotNet\OSType.cs" />
+    <Compile Include="CustomControls\PaintDotNet\Processor.cs" />
+    <Compile Include="CustomControls\PaintDotNet\ProcessorArchitecture.cs" />
+    <Compile Include="CustomControls\PaintDotNet\ProcessorFeature.cs" />
+    <Compile Include="CustomControls\PaintDotNet\SafeNativeMethods.cs" />
+    <Compile Include="CustomControls\PaintDotNet\Set.cs" />
+    <Compile Include="CustomControls\PaintDotNet\Set`1.cs" />
+    <Compile Include="CustomControls\PaintDotNet\Timing.cs" />
+    <Compile Include="CustomControls\PaintDotNet\Tracing.cs" />
+    <Compile Include="CustomControls\PaintDotNet\UI.cs" />
+    <Compile Include="CustomControls\RefreshingListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\GeneralTorrentInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\GeneralTorrentInfo.Designer.cs">
+      <DependentUpon>GeneralTorrentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\USButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\Util.cs" />
+    <Compile Include="Forms\ErrorLogWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ErrorLogWindow.Designer.cs">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comparers\FilesListViewColumnSorter.cs" />
+    <Compile Include="Comparers\ErrorsListViewColumnSorter.cs" />
+    <Compile Include="FileListViewItem.cs" />
+    <Compile Include="Forms\FindDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FindDialog.Designer.cs">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\GeoIPCountry.cs" />
+    <Compile Include="CustomControls\GListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\GListBoxItem.cs" />
+    <Compile Include="CustomControls\IconHelper.cs" />
+    <Compile Include="Comparers\TorrentListViewColumnSorter.cs" />
+    <Compile Include="CustomControls\InputBox.cs">
+    </Compile>
+    <Compile Include="CustomControls\ListViewNF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CultureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LocalSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LocalSettingsDialog.Designer.cs">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogListViewItem.cs" />
+    <Compile Include="MonoTorrent\BEncodedDictionary.cs" />
+    <Compile Include="MonoTorrent\BEncodedList.cs" />
+    <Compile Include="MonoTorrent\BEncodedNumber.cs" />
+    <Compile Include="MonoTorrent\BEncodedString.cs" />
+    <Compile Include="MonoTorrent\BEncodingException.cs" />
+    <Compile Include="MonoTorrent\Check.cs" />
+    <Compile Include="MonoTorrent\HashAlgoFactory.cs" />
+    <Compile Include="MonoTorrent\Hashes.cs" />
+    <Compile Include="MonoTorrent\IBEncodedValue.cs" />
+    <Compile Include="MonoTorrent\IMessage.cs" />
+    <Compile Include="MonoTorrent\InfoHash.cs" />
+    <Compile Include="MonoTorrent\Message.cs" />
+    <Compile Include="MonoTorrent\MonoTorrentCollectionBase.cs" />
+    <Compile Include="MonoTorrent\RawReader.cs" />
+    <Compile Include="MonoTorrent\ToolBox.cs" />
+    <Compile Include="MonoTorrent\Torrent.cs" />
+    <Compile Include="MonoTorrent\TorrentFile.cs" />
+    <Compile Include="Forms\MoveDataPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MoveDataPrompt.designer.cs">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\OtherStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OtherStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Comparers\PeersListViewColumnSorter.cs" />
+    <Compile Include="PeerListViewItem.cs" />
+    <Compile Include="CustomControls\PiecesGraph.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersistentCookies.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="PromiscuousCertificatePolicy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomControls\GeneralTorrentInfo.ru-RU.resx">
+      <DependentUpon>GeneralTorrentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.cs-CZ.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.da-DK.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.de-DE.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.es-ES.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.fr-FR.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.hu-HU.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.ko-KR.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.nl-NL.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.pl-PL.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.pt-BR.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.ru-RU.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.sv-SE.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.tr-TR.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.zh-CN.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutDialog.zh-TW.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\GeneralTorrentInfo.resx">
+      <DependentUpon>GeneralTorrentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.cs-CZ.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.da-DK.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.de-DE.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.es-ES.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.fr-FR.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.hu-HU.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.ko-KR.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.nl-NL.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.pl-PL.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.pt-BR.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.ru-RU.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.sv-SE.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.tr-TR.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.zh-CN.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLogWindow.zh-TW.resx">
+      <DependentUpon>ErrorLogWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.cs-CZ.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.da-DK.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.de-DE.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.es-ES.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.fr-FR.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.hu-HU.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.ko-KR.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.nl-NL.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.pl-PL.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.pt-BR.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.ru-RU.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.sv-SE.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.tr-TR.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.zh-CN.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDialog.zh-TW.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.cs-CZ.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.da-DK.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.de-DE.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.es-ES.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.fr-FR.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.hu-HU.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.ko-KR.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.nl-NL.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.pl-PL.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.pt-BR.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.ru-RU.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.ru.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.sv-SE.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.tr-TR.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.zh-CN.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalSettingsDialog.zh-TW.resx">
+      <DependentUpon>LocalSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.cs-CZ.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.da-DK.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.de-DE.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.es-ES.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.fr-FR.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.hu-HU.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.ko-KR.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.nl-NL.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.pl-PL.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.pt-BR.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.ru-RU.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.sv-SE.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.tr-TR.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.zh-CN.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.zh-TW.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.cs-CZ.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.da-DK.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.de-DE.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.es-ES.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.fr-FR.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.hu-HU.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.ko-KR.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.nl-NL.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.pl-PL.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.pt-BR.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.ru-RU.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.sv-SE.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.tr-TR.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.zh-CN.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveDataPrompt.zh-TW.resx">
+      <DependentUpon>MoveDataPrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.ru.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\OtherStrings.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\OtherStrings.da-DK.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\OtherStrings.de-DE.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\OtherStrings.es-ES.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\OtherStrings.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\OtherStrings.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\OtherStrings.ko-KR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\OtherStrings.nl-NL.resx" />
+    <EmbeddedResource Include="Localization\OtherStrings.pl-PL.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\OtherStrings.pt-BR.resx" />
+    <EmbeddedResource Include="Localization\OtherStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OtherStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\OtherStrings.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\OtherStrings.sv-SE.resx" />
+    <EmbeddedResource Include="Localization\OtherStrings.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\OtherStrings.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\OtherStrings.zh-TW.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Flags.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.cs-CZ.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.da-DK.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.de-DE.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.es-ES.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.fr-FR.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.hu-HU.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.ko-KR.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.nl-NL.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.pl-PL.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.pt-BR.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.ru-RU.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.sv-SE.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.tr-TR.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.zh-CN.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoteSettingsDialog.zh-TW.resx">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.cs-CZ.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.da-DK.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.de-DE.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.es-ES.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.fr-FR.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.hu-HU.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.ko-KR.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.nl-NL.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.pl-PL.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.pt-BR.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.ru-RU.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.sv-SE.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.tr-TR.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.zh-CN.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RssForm.zh-TW.resx">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.cs-CZ.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.da-DK.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.de-DE.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.es-ES.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.fr-FR.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.hu-HU.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.ko-KR.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.nl-NL.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.pl-PL.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.pt-BR.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.ru-RU.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.sv-SE.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.tr-TR.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.zh-CN.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsDialog.zh-TW.resx">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.cs-CZ.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.da-DK.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.de-DE.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.es-ES.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.fr-FR.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.hu-HU.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.ko-KR.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.nl-NL.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.pl-PL.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.pt-BR.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.ru-RU.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.sv-SE.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.tr-TR.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.zh-CN.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentLoadDialog.zh-TW.resx">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.cs-CZ.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.da-DK.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.de-DE.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.es-ES.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.fr-FR.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.hu-HU.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.ko-KR.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.nl-NL.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.pl-PL.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.pt-BR.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.ru-RU.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.sv-SE.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.tr-TR.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.zh-CN.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TorrentPropertiesDialog.zh-TW.resx">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.cs-CZ.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.da-DK.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.de-DE.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.es-ES.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.fr-FR.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.hu-HU.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.ko-KR.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.nl-NL.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.pl-PL.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.pt-BR.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.ru-RU.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.sv-SE.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.tr-TR.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.zh-CN.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UriPromptWindow.zh-TW.resx">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Flags.Designer.cs" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ProtocolConstants.cs" />
+    <Compile Include="Forms\RemoteSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RemoteSettingsDialog.Designer.cs">
+      <DependentUpon>RemoteSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NamedPipeSingleInstance.cs" />
+    <Compile Include="ResultEventArgs.cs" />
+    <Compile Include="CustomControls\SelectableLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\RssForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RssForm.Designer.cs">
+      <DependentUpon>RssForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Settings\FileLocalSettings.cs" />
+    <Compile Include="Settings\ILocalSettingsStore.cs" />
+    <Compile Include="Settings\RegistryJsonLocalSettings.cs" />
+    <Compile Include="Settings\RegistryLocalSettings.cs" />
+    <Compile Include="Settings\LocalSettings.cs" />
+    <Compile Include="Settings\RegistryLocalSettingsSingleton.cs" />
+    <Compile Include="Settings\RemoteToLocalPathMap.cs" />
+    <Compile Include="Settings\SambaShareMappings.cs" />
+    <Compile Include="CustomControls\SplitContainerFix.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\StatsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StatsDialog.Designer.cs">
+      <DependentUpon>StatsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskbarHelper.cs" />
+    <Compile Include="TCPSingleInstance.cs" />
+    <Compile Include="Toolbox.cs" />
+    <Compile Include="Torrent.cs" />
+    <Compile Include="Requests.cs" />
+    <Compile Include="Forms\TorrentLoadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TorrentLoadDialog.Designer.cs">
+      <DependentUpon>TorrentLoadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TorrentPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TorrentPropertiesDialog.Designer.cs">
+      <DependentUpon>TorrentPropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ICommand.cs" />
+    <Compile Include="TrackerListItem.cs" />
+    <Compile Include="TransmissionDaemonDescriptor.cs" />
+    <Compile Include="TransmissionWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\UICultureChanger.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UnhandledException.cs" />
+    <Compile Include="Forms\UriPromptWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UriPromptWindow.Designer.cs">
+      <DependentUpon>UriPromptWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\ledgreen.png" />
+    <None Include="Resources\ledred.png" />
+    <None Include="Resources\connect_creating.png" />
+    <None Include="Resources\connect_no.png" />
+    <None Include="Resources\edit_add.png" />
+    <None Include="Resources\network.png" />
+    <None Include="Resources\player_pause.png" />
+    <None Include="Resources\player_play.png" />
+    <None Include="Resources\button_cancel.png" />
+    <None Include="Resources\configure.png" />
+    <None Include="Resources\netconfigure.png" />
+    <None Include="Resources\net_add.png" />
+    <None Include="Resources\viewmag+.png" />
+    <None Include="Resources\_16x16_remove.png" />
+    <None Include="Resources\folder16.png" />
+    <None Include="Resources\server16.png" />
+    <None Include="Resources\peer16.png" />
+    <None Include="Resources\info16.png" />
+    <None Include="Resources\pipe16.png" />
+    <None Include="Resources\player_reload.png" />
+    <None Include="Resources\remove_and_delete.png" />
+    <None Include="Resources\hwinfo.png" />
+    <None Include="Resources\kgpg_edit.png" />
+    <None Include="Resources\openterm.png" />
+    <None Include="Resources\incomplete.png" />
+    <None Include="Resources\reannounce.png" />
+    <None Include="Resources\samba.png" />
+    <None Include="Resources\player_pause_all.png" />
+    <None Include="Resources\player_play_all.png" />
+    <None Include="Resources\xmag.png" />
+    <None Include="Resources\welcomefinish.png" />
+    <None Include="Resources\help14.png" />
+    <None Include="Resources\feed-icon.png" />
+    <None Include="Resources\blue.ico" />
+    <None Include="Resources\yellow.ico" />
+    <None Include="Resources\red.ico" />
+    <None Include="Resources\green.ico" />
+    <None Include="Resources\maxmind.png" />
+    <None Include="Resources\EngNumberFormatInfo.xml" />
+    <Content Include="Resources\edit16.png" />
+    <Content Include="Resources\StateImages\state_all.png" />
+    <Content Include="Resources\StateImages\state_apply.png" />
+    <Content Include="Resources\StateImages\state_download.png" />
+    <Content Include="Resources\StateImages\state_incomplete.png" />
+    <Content Include="Resources\StateImages\state_pause.png" />
+    <Content Include="Resources\StateImages\state_queue.png" />
+    <Content Include="Resources\StateImages\state_reload.png" />
+    <Content Include="Resources\StateImages\state_upload.png" />
+    <Content Include="Resources\StateImages\state_warning.png" />
+    <None Include="Resources\ToolbarImages\altspeed_off.png" />
+    <None Include="Resources\ToolbarImages\altspeed_off_waiting.png" />
+    <None Include="Resources\ToolbarImages\altspeed_on.png" />
+    <None Include="Resources\ToolbarImages\altspeed_on_waiting.png" />
+    <Content Include="transmission_large.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\Raccoom.Xml\Raccoom.Xml.csproj">
+      <Project>{5CAAE842-11D7-42F8-9C81-096252F57C76}</Project>
+      <Name>Raccoom.Xml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Content Include="Data\GeoIP.dat">
+      <Link>GeoIP.dat</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\lib\WindowsAPICodePack\*.dll">
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\LICENSE">
+      <Link>LICENSE</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Readme.md">
+      <Link>Readme.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,29 @@
+﻿using System.Windows.Forms;
+
+namespace NeoTransmission
+{
+    class LogListViewItem : ListViewItem
+    {
+        public long UpdateSerial
+        {
+            get;
+            set;
+        }
+
+        public bool Debug
+        {
+            get;
+            set;
+        }
+        public LogListViewItem()
+        {
+            Debug = false;
+            UpdateSerial = -1;
+        }
+        public LogListViewItem(string text):base(text)
+        {
+            Debug = false;
+            UpdateSerial = -1;
+        }
+    }
+}

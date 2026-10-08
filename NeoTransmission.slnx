@@ -1,0 +1,34 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/NeoTransmission/NeoTransmission.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <File Path="tests/Readme.md" />
+  </Folder>
+  <Folder Name="/utils/">
+    <Project Path="utils/GetVersion/GetVersion.csproj" />
+    <File Path="utils/Readme.md" />
+  </Folder>
+  <Folder Name="/utils/Localization/">
+    <File Path="utils/Localization/syncresx.sh" />
+    <File Path="utils/Localization/prune_resx.pl" />
+    <File Path="utils/Localization/removebom.pl" />
+  </Folder>
+  <Folder Name="/lib/">
+    <Project Path="lib/Raccoom.Xml/Raccoom.Xml.csproj" />
+    <File Path="lib/Readme.md" />
+  </Folder>
+  <Folder Name="/build/">
+    <File Path="build/Build.proj" />
+    <File Path="build/Build.ps1" />
+  </Folder>
+  <Folder Name="/build/Installer/">
+    <File Path="build/Installer/Installer.nsi" />
+    <File Path="build/Installer/FileAssociation.nsh" />
+    <File Path="build/Installer/ProtocolAssociation.nsh" />
+  </Folder>
+  <Folder Name="/docs/">
+    <File Path="docs/RepositoryLayout.md" />
+    <File Path="docs/LegacyReadme.txt" />
+  </Folder>
+</Solution>
